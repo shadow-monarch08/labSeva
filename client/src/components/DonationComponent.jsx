@@ -4,6 +4,8 @@ import crying_emoji from '../images/crying-face-svgrepo-com.svg'
 import disappoint_emoji from '../images/disappointed-face-svgrepo-com.svg'
 import smiling_heart_emoji from '../images/smiling-face-with-heart-eyes-svgrepo-com.svg'
 import smiling_emoji from '../images/smiling-face-with-smiling-eyes-svgrepo-com.svg'
+import { motion } from 'motion/react'
+
 
 const StatusBar = () => {
     const [emojiArr, setEmojiArr] = useState(
@@ -79,8 +81,8 @@ const StatusBar = () => {
 
 const DonationComponent = () => {
     return (
-        <>
-            <div className='absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] min-h-[30rem] w-[70%] bg-amber-50 shadow-2xl rounded-2xl p-7 flex flex-col gap-[2.5rem] my-[2rem]'>
+        <div className='absolute top-0 left-0 h-fit w-full flex justify-center items-center py-[4rem]'>
+            <div className='min-h-[30rem] w-[70%] bg-amber-50 shadow-2xl rounded-2xl p-7 flex flex-col gap-[2.5rem]'>
                 <h1 className='text-4xl font-semibold text-[#85bf78] text-center'>
                     Donate for a good cause
                 </h1>
@@ -106,9 +108,22 @@ const DonationComponent = () => {
                         <StatusBar />
                     </div>
                 </div>
+                <div className='h-[10rem] flex justify-center items-center'>
+                    <motion.button
+                        type='button'
+                        className='w-fit bg-[#339c25] text-2xl font-bold text-[#fffae5] px-[2.5rem] py-[0.8rem] rounded-lg shadow-xl cursor-pointer relative'
+                        whileTap={{ scale: 0.9 }}
+                        // onClick={() => { navigate('/healthProtal') }}
+                    // style={!isSendingFile && { filter : 'blur(3px)'}}
+                    >
+                        <p>
+                            Visit the page ?
+                        </p>
+                    </motion.button>
+                </div>
             </div>
 
-        </>
+        </div>
     )
 }
 
