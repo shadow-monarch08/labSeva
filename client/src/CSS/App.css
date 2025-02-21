@@ -1,0 +1,195 @@
+/* Reset styles */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url("sections/Header.css");
+@import url("sections/Hero.css");
+@import url("sections/checkup.css");
+@import url("sections/contact.css");
+@import url("sections/Accomplishment.css");
+@import url("sections/About.css");
+@import url("sections/userinfo.css");
+@import url("sections/checkupPage.css");
+@import url("sections/liverHealthForm.css");
+@import url("sections/news/newsComponent.css");
+@import url("sections/news/newsSection.css");
+@import url("sections/login-signup/login.css");
+@import url("sections/login-signup/signup.css");
+@import url("sections/Toast.css");
+
+
+.ubuntu-light {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+* {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+*::-webkit-scrollbar-track {
+    display: none;
+}
+
+*::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+:root {
+    --font-color: #333333;
+    /* Blue shades */
+    --primary-color: #56CCF2;
+    --light-blue: #e0f3ff;
+
+    /* Green shades */
+    --dark-green: #246740;
+    --secondary-color: #6fcf97;
+    --light-green: rgb(217, 247, 208);
+
+    /* Orange shades */
+    --orange: #F2994A;
+    --light-orange: #ffecdb;
+
+    /* Red shades */
+    --red: #EB5757;
+    --light-red: #ffd1d1;
+
+    /* Gray shades */
+    --light-gray: #f2f2f2;
+    --light-green: #d9f7d0;
+    --dark-green-1: #add9a2;
+    --dark-green-2: #85bf78;
+    --dark-green-3: #5ca64f;
+    --dark-green-4: #339c25;
+    --dark-green-5: #008200;
+    --light-green: #d9f7d0;
+    --analogous-light-green-1: #e5fbd9;
+    --analogous-light-green-2: #f4ffec;
+    --analogous-soft-yellow-1: #f7f1d0;
+    --analogous-soft-yellow-2: #fffae5;
+    --analogous-light-blue-1: #d0f7f7;
+    --analogous-light-blue-2: #ecffff;
+
+    --triadic-soft-purple-1: #ecd9f7;
+    --triadic-soft-purple-2: #f7d0f7;
+    --triadic-light-orange-1: #f7edd0;
+    --triadic-light-orange-2: #f7f2d0;
+
+    --complementary-soft-pink-1: #f7d0e5;
+    --complementary-soft-pink-2: #f7d0f4;
+    --complementary-light-gray-1: #e1e1e1;
+    --complementary-light-gray-2: #f0f0f0;
+
+    --monochromatic-light-green-1: #e2f6d7;
+    --monochromatic-light-green-2: #c3eab0;
+}
+
+/* Set body and html styles */
+body,
+html {
+    height: auto;
+    max-height: fit-content;
+    width: 100%;
+    /* max-width: 1440px; */
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--light-green);
+    color: var(--font-color);
+    background-size: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke
+}
+
+
+.main-wrapper {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+
+}
+
+.main {
+    width: 100%;
+    height: auto;
+    max-width: 1611px;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.underline-lg {
+    position: relative;
+}
+
+.underline-lg::after {
+    content: '';
+    position: absolute;
+    bottom: -25%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--dark-green-4);
+}
+
+.underline-md {
+    position: relative;
+}
+
+.underline-md::after {
+    content: '';
+    position: absolute;
+    bottom: -7%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--dark-green-4);
+}
+
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 40px solid #bb4d00;
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    animation: rotateAnimation 2s infinite ease-out;
+}

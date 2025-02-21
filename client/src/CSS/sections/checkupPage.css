@@ -1,0 +1,111 @@
+.checkupPage__wrapper {
+    /* min-height: 150svh; */
+    max-height: fit-content;
+    width: 100%;
+    /* display: grid;
+    grid-template-rows: 60% 40%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin: 6em 0;
+    padding: 0 2em;
+}
+
+.checkupGraph__wrapper {
+    height: 100%;
+    width: 80%;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding: 0 1em;
+}
+
+.checkup-Line-Pie-Graph__wrapper {
+    height: 25rem;
+    background: var(--analogous-soft-yellow-2);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.checkupForm__wrapper {
+    width: 80%;
+    height: 30rem;
+    display: grid;
+    grid-template-columns: 1fr 60%;
+    align-self: center;
+    background: var(--analogous-soft-yellow-2);
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.results__wrapper {
+    background: var(--analogous-soft-yellow-2);
+    border-radius: 1em;
+    padding: 1em;
+
+}
+
+.information__wrapper {
+    width: 100%;
+    height: 100%;
+    background: url('../../images/blurry-gradient-haikei-2.svg') no-repeat center/cover;
+    border-radius: 1em;
+}
+
+.coverdiv {
+    width: 100%;
+    height: 100%;
+    background: url('../../images/linechar.png') no-repeat center/cover;
+    /* filter: blur(10px); */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* filter: brightness(0.5); */
+}
+.coverdiv::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0,0.5);
+    backdrop-filter: blur(10px);
+    top: 0;
+    z-index: 9;
+
+}
+.coverdiv p{
+    width: 80%;
+    z-index: 10;
+    position: relative;
+    color: whitesmoke;
+    font-size: 2em;
+    padding: 3em;
+    border: 2px dashed whitesmoke;
+    text-align: center;
+}
+.coverdiv p a{
+    text-decoration: underline;
+}
+
+#pie{
+    width: 100%;
+    background: url('../../images/doughnutChart.png') no-repeat center/cover;
+    height: 100%;
+}
+#pie p{
+    padding: 2em;
+    width: 95%;
+}

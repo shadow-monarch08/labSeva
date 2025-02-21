@@ -1,0 +1,321 @@
+.contact__wrapper{
+    min-height: 100vh;
+    max-height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20em;
+    margin-bottom: 7em;
+    position: relative;
+    gap: 4em;
+    /* background: var(--dark-green); */
+}
+.contact__wrapper::after{
+    content: '';
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    background: linear-gradient(to top, var(--secondary-color) 0%, rgb(111, 207, 151,0.5) 50%,  rgb(111, 207, 151,0) 100%);
+    z-index: -1;
+    top: 0;
+}
+.contact-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:0.5em;
+    text-align: center;
+}
+.contact-heading .heading {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 3em;
+    font-weight: 600;
+}
+.contact-heading .heading img{
+    height: 5rem;
+    width: 5rem;
+}
+.contact-heading > p{
+    width: 60%;
+    overflow-wrap: break-word;
+    font-size: 1.1em;
+    font-weight: 400;
+    /* word-break: break-all; */
+}
+.contact__form-wrapper{
+    width: 80%;
+    height: auto;
+    /* margin-top:5%; */
+    display: grid;
+    grid-template-columns: 1fr 70%;
+    border-radius: 1.5em;
+    background: var(--light-green);
+    padding: 1em;
+}
+.contact__form{
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    padding: 3em 5em;
+}
+.contact_detail{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    background: url('../../images/blurry-gradient-haikei.svg') no-repeat center/cover;
+    padding: 2.5em 2em;
+    color: var(--light-blue);
+    border-radius: 1em;
+}
+/* All the wrapper */
+
+.form__name-email-wrapper{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto-fill, minmax(50%, 1fr);
+    gap: 1.5em;
+}
+.name-email-innerWrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.form_subject-wrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em; 
+}
+.form__message-wrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.form__submit-wrapper{
+    width: fit-content;
+    height: fit-content;
+    justify-self: flex-start;
+}
+
+
+/* All inputs */
+.form-input{
+    max-width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgb(0, 130, 0,0.3);
+    padding: 0.5em 0.5em;
+    font-size: 1.2em;
+    color: var(--font-color);
+    transition: border-bottom 0.3s ease, border 0.3s ease;
+}
+.form-input:focus{
+    outline: none;
+    border-bottom: 2px solid rgb(0, 130, 0);
+}
+.from__message{
+    resize: vertical;
+    min-height: 5em;
+    height: 10em;
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgb(0, 130, 0,0.3);
+    padding: 0.5em 0.5em;
+    font-size: 1.2em;
+    color: var(--font-color);
+    transition: border-bottom 0.3s ease, border 0.3s ease;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+}
+.from__message:focus{
+    outline: none;
+    border-bottom: 2px solid var(--dark-green-5);
+
+}
+.sbt-btn{
+    padding: 0.8em 1em;
+    font-size: 0.9em;
+    background: var(--dark-green-5);
+    border: 2px solid var(--dark-green-5);
+    border-radius: 0.3em;
+    color: var(--light-blue);
+    transition: background 0.3s ease, border 0.3s ease, scale 0.1s ease;
+    cursor: pointer;
+}
+@media (hover : hover){
+    .sbt-btn:hover{
+        background: transparent;
+        color: var(--dark-green-5);
+    }
+}
+
+@media (hover:none) {
+    .sbt-btn:active{
+        opacity: 0.5;
+    }
+}
+
+/* contact Detail */
+
+.contact_detail img{
+    height: 1.5em;
+    width: 1.5em;
+}
+
+.contact_detail-header{
+    width: 100%;
+    height: fit-content;
+    font-size: 1.1em;
+}
+.contact_detail-header h6{
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+.contact_detail > div:not(:first-child){
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    font-weight: 600;
+
+}
+.contact_detail ul{
+    list-style-position: inside;
+}
+
+
+
+@media (max-width:1171px) {
+    .contact__form-wrapper{
+        width: 90%;
+    }
+    .contact__wrapper{
+        margin-bottom: 6em;
+        position: relative;
+        /* background: var(--dark-green); */
+        font-size: 1em;
+        gap: 3em;
+    }
+    .contact__form{
+        padding: 3em 3em;
+    }
+}
+@media (max-width:1024px) {
+    .contact__form-wrapper{
+        width: 90%;
+    }
+    .contact__wrapper{
+        margin-bottom: 6em;
+        position: relative;
+        /* background: var(--dark-green); */
+        font-size: 0.8em;
+    }
+    .contact__form{
+        padding: 3em 2.5em;
+    }
+    .contact_detail{
+        padding: 2em 1.5em;
+    }
+}
+@media (max-width:768px) {
+    .contact__form-wrapper{
+        grid-template-rows: 80% 20%;
+        grid-template-columns: 100%;
+        gap: 1em;
+    }
+    .contact-heading .heading img{
+        height: 4rem;
+        width: 4rem;
+    }
+    .contact_detail{
+        grid-row: 2;
+        flex-direction: row;
+        gap: 2em;
+        padding: 1.5em 1em;
+    }
+    .contact_detail-header{
+        display: none;
+    }
+    .contact__form{
+        padding: 3em 2em;
+    }
+    .from__message{
+        min-height: 3em;
+        max-height: 6em;
+    }
+    .form-input{
+        padding: 0.4em 0.4em;
+    }
+    .contact_detail > div:not(:first-child){
+        gap: 1.5em;
+    }
+}
+
+@media (max-width:516px) {
+    .contact__wrapper{
+        font-size: 0.9em;
+        gap: 2em;
+    }
+    .contact__form{
+        padding: 1.5em 2.5em;
+    }
+    
+    .form__name-email-wrapper{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .contact-heading > p{
+        width: 80%
+    }
+    .contact_detail > div:not(:first-child){
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width:426px) {
+    .contact-heading .heading img{
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+    .contact__form-wrapper{
+        padding: 0;
+    }
+    .contact__wrapper{
+        font-size: 0.85em;
+    }
+    .contact__form{
+        padding: 1.5em 3em;
+    }
+}
+
+@media (max-width:376px) {
+    .contact__form-wrapper{
+        grid-template-rows: 75% 25%;
+        grid-template-columns: 100%;
+        gap: 1em;
+    }
+    .contact_detail{
+        flex-direction: column;
+        gap: 1em;
+        font-size: 1.1em;
+    }
+}

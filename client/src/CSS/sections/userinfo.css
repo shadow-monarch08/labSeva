@@ -1,0 +1,65 @@
+.userIcon-wrapper{
+    height: 3em;
+    width: 3em;
+    cursor: pointer;
+}
+.userIcon-wrapper img{
+    height: 100%;
+    width: 100%;
+}
+.useInfo-wrapper{
+    display: none;
+    width: 20em;
+    position: absolute;
+    background: var(--analogous-light-blue-2);
+    top: 150%;
+    left: 0;
+    transform: translateX(-5em);
+    z-index: 100;
+    padding: 2em 3em;
+    box-shadow: 0 0 0.8em 0.2em rgba(97, 97, 97, 0.7)
+    /* word-break: break-all;
+    word-wrap: break-word; */
+}
+.useInfo-wrapper.active{
+    display: block;
+}
+.userInfo-container{
+    padding: 0.6em 0;
+    border-top: 1px solid var(--font-color);
+    border-bottom: 1px solid var(--font-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.userInfo__header{
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+}
+.user-name-email{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.user-name-email :nth-child(1){
+    font-weight: 600;
+}
+.name-email{
+    overflow-wrap:break-word;
+    word-break: break-all;
+}
+.logout-btn-wrapper{
+    margin-top: 1.5em;
+}
+.logout-btn-wrapper button{
+    cursor: pointer;
+    padding: 0.6em 0.9em;
+    font-size: 1em;
+    background: var(--dark-green);
+    border: 2px solid var(--dark-green);
+    color: whitesmoke;
+}
+.logout-btn-wrapper button:active{
+    opacity: 0.7;
+}

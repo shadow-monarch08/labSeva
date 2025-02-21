@@ -1,0 +1,212 @@
+
+
+.header___navbar {
+    position: fixed;
+    width: 90%;
+    height: auto;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: 20% 1fr 15%;
+    padding: 0.9em 0.5em;
+    border-radius: 0.5em;
+    transition: background 0.3s ease, box-shadow 0.3s ease, margin-top 0.3s ease;
+}
+
+.header___navbar::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 100%;
+    background: var(--red);
+    transition: width 0.2s ease;
+
+}
+
+.header___navbar.header__navbar-scrolled {
+    margin-top: 2em;
+    /* background: var(--light-green   ); */
+    background: var(--dark-green-3);
+    box-shadow: 0 0 0.8em 0.2em rgba(97, 97, 97, 0.2);
+}
+
+.header___navbar.header__navbar-scrolled::after {
+    width: 0%;
+}
+
+.header___navbar a {
+    color: var(--font-color);
+}
+.vartical-img-wrapper{
+    height: 1.5em ;
+    width: 1.5em;
+    overflow-y: hidden;
+    cursor: pointer;
+    background: var(--light-blue);
+    border-radius: 0.1em;
+}
+.vertical-img-gallery{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+.vertical-img-gallery img{
+    height: 1.5em;
+    width: 1.5em;
+}
+.header___navbar.header__navbar-scrolled a {
+    color: whitesmoke;
+}
+
+.header__navbar-logo-cover {
+    font-size: 1.3em;
+    font-family: "Montserrat Alternates";
+    font-weight: 800;
+    display: flex;
+    place-items: center;
+    padding: 0 0.3em;
+}
+
+.header__navbar-logo-cover p {
+    padding: 0.5em;
+    background: var(--light-blue);
+    box-shadow: 0 0 0.8em 0.1em rgba(97, 97, 97, 0.2);
+    transition: box-shadow 0.4s ease;
+}
+
+.header__navbar-logo-cover p:hover {
+    box-shadow: none;
+}
+
+.header__navbar-logo-cover p a {
+    color: var(--red) !important;
+}
+
+
+.header__navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    place-items: center;
+    /* justify-content: center; */
+    gap: 4em;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.navigation-lists {
+    list-style: none;
+    display: flex;
+    gap: 0.4em;
+    cursor: pointer;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+.navigation-lists:hover .vertical-img-gallery{
+    transform: translateY(-50%);
+    /* filter: brightness(0.5); */
+}
+.navigation-lists #arrow{
+    height: 0.8em;
+    width: 0.8em;
+    margin-top: 0.4em;
+    cursor: pointer;
+}
+.header___navbar.header__navbar-scrolled .navigation-lists #arrow{
+    filter: invert(100%);
+}
+.dropDown-wrapper {
+    /* background: #000; */
+    position: relative;
+}
+
+.dropDown-wrapper-2 {
+    /* background: #000; */
+    width: fit-content;
+    position: absolute;
+    padding: 0.7em 0;
+    z-index: 100;
+    margin-top: 50%;
+    opacity: 0;
+    transition: margin-top 0.1s ease-in 0.15s, opacity 0.3s ease-in;
+}
+.dropDown-wrapper-2.active{
+    margin-top: 25%;
+    opacity: 1;
+}
+.dropDown {
+    width: 20em;
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(calc(100% / 3), 1fr));
+    gap: 0.5em;
+    transition: box-shadow 0.1s ease-in 0.15s;
+}
+.dropDown-wrapper-2.active .dropDown{
+    box-shadow: 0.5em 0.5em rgb(0, 0, 0,0.6);
+}
+.dropDown {
+    padding: 1em 1.5em;
+    background: var(--dark-green);
+    border-radius: 0.3em;
+    border: 0.1px solid rgb(245, 245, 245, 0.5);
+}
+
+.dropDown .navlink-light {
+    color: rgb(245, 245, 245);
+}
+.user-login-logout{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* flex-direction: row-reverse; */
+    justify-content: center;
+    align-items: center;
+}
+.login-out-btns{
+    display: flex;
+    gap: 1em;
+}
+.login-out-btns.inActive{
+    display: none;
+}
+.login-out-btns a{
+    padding: 0.5em 1.1em;
+    background: var(--dark-green);
+    color: whitesmoke;
+    /* border-radius: 0.5em; */
+    border: 3px solid var(--dark-green);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.user-logo{
+    height: auto;
+    width: auto;
+}
+
+@media (hover:hover) {
+    .login-out-btns a:hover{
+        background: var(--light-green);
+        color: var(--font-color);
+    }
+}
+@media (hover:none){
+    .login-out-btns a:active{
+        opacity: 0.6;
+    }
+}
+@media (max-width:1025px) {
+    .header___navbar {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width:769px) {
+    .header___navbar {
+        width: 90%;
+        font-size: 0.7em;
+    }
+}

@@ -1,0 +1,148 @@
+.checkDisease {
+    width: 100%;
+    position: relative;
+    /* aspect-ratio: 1500/550; */
+    height: 90svh;
+    /* max-height: max-content; */
+    background: url("../../images/layered-waves-haikei.svg") no-repeat center/cover;
+    overflow: visible;
+    padding-left: 1.5em;
+    align-content: flex-end;
+}
+
+.checkDisease {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 95%;
+    position: relative;
+}
+
+.checkdisease__image-container {
+    height: 100%;
+    width: 100%;
+    justify-self: baseline;
+    /* z-index: 100; */
+}
+
+.checkdisease__image-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.checkdisease__content-container {
+    height: fit-content;
+    width: fit-content;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 2.5em;
+    z-index: 5;
+    text-align: right;
+    background: rgb(111, 207, 151, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 0.5em;
+}
+.checkup__btn-wrapper{
+    height: max-content;
+    width: auto;
+    text-align: right;
+}
+.checkup__btn-wrapper a{
+    padding: 0.5em 0.8em;
+    font-size: 1.1em;
+    background: var(--red);
+}
+.checkup__btn-wrapper a:active{
+    opacity: 0.7;
+}
+
+@media (max-width:1025px) {
+    .checkdisease__content-container {
+        padding: 1.5em;
+    }
+
+    .checkdisease__content-container .heading {
+        font-size: 2em;
+    }
+
+    .checkdisease__image-container {
+        height: 90%;
+        width: 90%;
+    }
+}
+
+@media (max-width:769px) {
+    .checkDisease {
+        height: 70svh;
+        grid-template-rows: 90%;
+
+    }
+
+    .checkDisease::before {
+        height: 140svh;
+    }
+
+    .checkdisease__content-container .heading {
+        font-size: 1.5em;
+    }
+
+    .checkdisease__image-container {
+        height: 85%;
+        width: 85%;
+    }
+}
+
+@media (max-width:595px) {
+    .checkDisease {
+        grid-template-columns: 100%;
+        justify-items: center;
+        margin-top: 3em;
+    }
+
+    .checkdisease__content-container .heading {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .checkdisease__image-container {
+        position: absolute;
+        left: 10%;
+    }
+}
+@media (max-width:426px) {
+    .checkDisease {
+        margin-top: 2.5em;
+    }
+    .checkDisease::before {
+        height: 140svh;
+    }
+
+    .checkdisease__content-container .heading {
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    .checkdisease__image-container {
+        height: 75%;
+        width: 75%;
+        left: 15%;
+        top: 10%;
+    }
+}
+@media (max-width:376px) {
+    .checkDisease {
+        height: 55svh;
+        margin-top: 1.5em;
+    }
+    .checkDisease::before {
+        height: 110svh;
+    }
+
+    .checkdisease__content-container .heading {
+        font-size: 1em;
+        text-align: center;
+    }
+}
