@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router'
 import eye_open from '../../images/eye-svgrepo-com.svg'
 import eye_close from '../../images/eye-slash-svgrepo-com.svg'
 import { UseGlobalContext } from '../Context/Globalcontext'
+import ToggleWrapper from '../TopToggleBar/Index'
+import CustomInput from '../CustomInput'
 
 
 const Signup = () => {
@@ -12,7 +14,7 @@ const Signup = () => {
   const [creadentials, setCreadentials] = useState({
     name: "",
     email: "",
-    password: ""
+    password: "",
   })
   const [showPass, setShowPass] = useState(false)
   const { showToast, setShowToast, toastBody, setToastBody } = UseGlobalContext()
@@ -39,7 +41,7 @@ const Signup = () => {
         setCreadentials(newstate);
         setShowToast({ ...showToast, [id]: { toast: 'success' } });
         setToastBody({ ...toastBody, success: { ...toastBody.success, [id]: { title: 'Success!', message: 'loged in successfully' } } })
-        navigate('/', { replace : true })
+        navigate('/', { replace: true })
       } else {
         setShowToast({ ...showToast, [id]: { toast: 'error' } });
         setToastBody({ ...toastBody, error: { ...toastBody.error, [id]: { title: 'Error!', message: 'Some error occcured' } } })
@@ -62,39 +64,23 @@ const Signup = () => {
           <img src={arrow} alt="" />
         </div>
       </Link>
-      <div className="signup__form-wrapper">
-        <div className="form-header">
-          <p className="heading-form">SignUp</p>
-          <p className="info">Create an account to activate all the benifits</p>
-        </div>
-        <form action="post" onSubmit={handleSubmit} className='signup__form'>
-          <div className="email-pass-name__wrapper">
-            <label htmlFor="name">Your Name</label>
-            <input type="text" id='name' name='name' className='form-input' onChange={onChange} value={creadentials.name} required />
-          </div>
-          <div className="email-pass-name__wrapper">
-            <label htmlFor="email">Your Email</label>
-            <input type="email" id='email' name='email' className='form-input' onChange={onChange} value={creadentials.email} required />
-          </div>
-          <div className="email-pass-name__wrapper">
-            <label htmlFor="password">Your Password</label>
-            <div className='relative'>
-              <input type={showPass ? 'text' : 'password'} name="password" id="password" className='form-input w-full' onChange={onChange} value={creadentials.password} required />
-              <div className='w-[1.5rem] h-[1.5rem] absolute right-1 top-[50%] -translate-y-[50%] cursor-pointer' onClick={() => setShowPass(!showPass)}>
-                {
-                  !showPass ?
-                    <img className='w-full h-full' src={eye_open} alt="eye_icon" />
-                    :
-                    <img className='w-full h-full' src={eye_close} alt="eye_icon" />
-                }
-              </div>
+      <div className="bg-[#d9f7d0] overflow-auto h-[100svh] w-[55%] justify-self-end py-[3rem]">
+          <div className='flex flex-col gap-[3rem] justify-center w-full h-fit items-center pl-[3rem]'>
+            <ToggleWrapper />
+            <div className="form-header">
+              <p className="heading-form">SignUp</p>
+              <p className="info">Create an account to activate all the benifits</p>
             </div>
-          </div>
-          <div className="btn-wrapper_2">
-            <button type="submit">Submit</button>
-            <Link to='/login'>Have an account? Login</Link>
-          </div>
-        </form>
+            <form action="post" onSubmit={handleSubmit} className='signup__form'>
+            <CustomInput onChange={onChange} name='name' label='Your Name' id='name' Type='text'/>
+            <CustomInput onChange={onChange} name='email' label='Your Email' id='email' Type='email'/>
+            <CustomInput onChange={onChange} name='password' label='Your Password' id='password' Type='password'/>
+              <div className="btn-wrapper_2">
+                <button type="submit">Submit</button>
+                <Link to='/login'>Have an account? Login</Link>
+              </div>
+            </form>
+        </div>
       </div>
     </div>
   )

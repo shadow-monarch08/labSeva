@@ -108,7 +108,7 @@ const Contact = () => {
                         <textarea id="message" name="message" value={userInfo.message} className='from__message' onChange={onChange} placeholder='Write your messge here' required></textarea>
                     </div>
                     <div className="form__submit-wrapper">
-                        <button type="submit" className='sbt-btn'>Send Message </button>
+                        <button type="submit" className='sbt-btn'>Send Message</button>
                     </div>
                 </form>
             </div>

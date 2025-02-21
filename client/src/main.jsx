@@ -9,6 +9,7 @@ import './index.css';
 import './CSS/App.css'
 import { GlobalProvider } from "./components/Context/Globalcontext";
 import ToastWrapper from "./components/toastMessage/Index";
+import DonationPage from "./routes/DonationPage";
 
 defaults.responsive = true;
 defaults.maintainAspectRatio = false
@@ -29,6 +30,7 @@ ReactDOM.createRoot(root).render(
 
           <Route path="/" element={<Home />} />
           <Route path="/healthProtal" element={<HealthProtal />} />
+          <Route path="/publicDonation" element={<DonationPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
 

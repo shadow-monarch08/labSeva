@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router';
 import eye_open from '../../images/eye-svgrepo-com.svg'
 import eye_close from '../../images/eye-slash-svgrepo-com.svg'
 import { UseGlobalContext } from '../Context/Globalcontext';
+import ToggleWrapper from '../TopToggleBar/Index';
+import CustomInput from '../CustomInput';
 
 const Login = () => {
     let navigate = useNavigate();
@@ -41,11 +43,11 @@ const Login = () => {
                     setCreadentials(newstate)
                     setShowToast({ ...showToast, [id]: { toast: 'success' } });
                     setToastBody({ ...toastBody, success: { ...toastBody.success, [id]: { title: 'Success!', message: 'loged in successfully' } } })
-                    navigate('/', { replace : true })
+                    navigate('/', { replace: true })
                     // console.log(localStorage.getItem('token'));
 
                 } else {
-                    setShowToast({ ...showToast, [id]: { toast: 'error'  } });
+                    setShowToast({ ...showToast, [id]: { toast: 'error' } });
                     setToastBody({ ...toastBody, error: { ...toastBody.error, [id]: { title: 'Error!', message: 'Some error occcured' } } })
                 }
             }
@@ -66,34 +68,21 @@ const Login = () => {
                 </div>
             </Link>
             <div className="login__form-wrapper">
-                <div className="form-header">
-                    <p className="heading-form">login</p>
-                    <p className="info">Login to access all the features</p>
-                </div>
-                <form action="post" onSubmit={handleSubmit} className='login__form'>
-                    <div className="email-pass-name__wrapper">
-                        <label htmlFor="email">Your Email</label>
-                        <input type="email" id='email' name='email' className='form-input' onChange={onChange} value={creadentials.email} required />
+                <div className='flex flex-col gap-[3rem] justify-center w-full items-center pl-[3rem]'>
+                    <ToggleWrapper />
+                    <div className="form-header">
+                        <p className="heading-form">login</p>
+                        <p className="info">Login to access all the features</p>
                     </div>
-                    <div className="email-pass-name__wrapper">
-                        <label htmlFor="password">Your Password</label>
-                        <div className='relative'>
-                            <input type={showPass ? 'text' : 'password'} name="password" id="password" className='form-input w-full' onChange={onChange} value={creadentials.password} required />
-                            <div className='w-[1.5rem] h-[1.5rem] absolute right-1 top-[50%] -translate-y-[50%] cursor-pointer' onClick={() => setShowPass(!showPass)}>
-                                {
-                                    !showPass ?
-                                        <img className='w-full h-full' src={eye_open} alt="eye_icon" />
-                                        :
-                                        <img className='w-full h-full' src={eye_close} alt="eye_icon" />
-                                }
-                            </div>
+                    <form action="post" onSubmit={handleSubmit} className='login__form'>
+                        <CustomInput onChange={onChange} name='email' label='Your Email' id='email' Type='email'/>
+                        <CustomInput onChange={onChange} name='password' label='Your Password' id='password' Type='password'/>
+                        <div className="btn-wrapper_2">
+                            <button type="submit">Submit</button>
+                            <Link to='/signup'>Don&apos;t have account? Creat Now</Link>
                         </div>
-                    </div>
-                    <div className="btn-wrapper_2">
-                        <button type="submit">Submit</button>
-                        <Link to='/signup'>Don&apos;t have account? Creat Now</Link>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     )
