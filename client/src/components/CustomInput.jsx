@@ -7,7 +7,11 @@ const CustomInput = ({ onChange, label, id, Type, value, name }) => {
 
 
     return (
+<<<<<<< HEAD
         <div className='flex flex-col gap-[0.7rem] w-full'>
+=======
+        <div className='flex flex-col gap-[0.7rem]'>
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
             <label htmlFor="email">
                 {
                     label

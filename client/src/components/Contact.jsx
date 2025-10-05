@@ -16,8 +16,13 @@ const Contact = () => {
     useEffect(() => {
       setUserInfo({
         ...userInfo,
+<<<<<<< HEAD
         name: user.name,
         email: user.email
+=======
+        name: user.username,
+        email: user.useremail
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
       })
     }, [user])
     

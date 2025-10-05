@@ -10,8 +10,11 @@ import './CSS/App.css'
 import { GlobalProvider } from "./components/Context/Globalcontext";
 import ToastWrapper from "./components/toastMessage/Index";
 import DonationPage from "./routes/DonationPage";
+<<<<<<< HEAD
 import TestCart from "./routes/TestCart";
 import SelectTest from "./routes/SelectTest";
+=======
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
 
 defaults.responsive = true;
 defaults.maintainAspectRatio = false
@@ -35,8 +38,11 @@ ReactDOM.createRoot(root).render(
           <Route path="/publicDonation" element={<DonationPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+<<<<<<< HEAD
           <Route path="/testCart" element={<TestCart/>} />
           <Route path="/selectTest" element={<SelectTest/>} />
+=======
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
 
         </Routes>
       </div>

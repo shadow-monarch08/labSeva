@@ -9,7 +9,10 @@
     grid-template-columns: 20% 1fr 15%;
     padding: 0.9em 0.5em;
     border-radius: 0.5em;
+<<<<<<< HEAD
     backdrop-filter: blur(20px);
+=======
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
     transition: background 0.3s ease, box-shadow 0.3s ease, margin-top 0.3s ease;
 }
 

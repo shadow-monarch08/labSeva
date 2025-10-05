@@ -53,6 +53,9 @@ router.get('/fetchAllScores', fetchuser, async (req, res) => {
         res.status(400).send({ error: error })
     }
 })
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
 module.exports = router

@@ -24,8 +24,11 @@ router.post('/createUser',
             user = await User.create({
                 name: req.body.name,
                 email: req.body.email,
+<<<<<<< HEAD
                 phoneNumber : req.body.phone,
                 dateOfBirth : req.body.dateOfBirth,
+=======
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
                 password: encryptedPass,
             })
             let data = {

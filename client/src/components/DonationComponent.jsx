@@ -81,7 +81,11 @@ const StatusBar = () => {
 
 const DonationComponent = () => {
     return (
+<<<<<<< HEAD
         <div className='absolute top-0 left-0 h-fit w-full flex justify-center items-center py-[7rem]'>
+=======
+        <div className='absolute top-0 left-0 h-fit w-full flex justify-center items-center py-[4rem]'>
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
             <div className='min-h-[30rem] w-[70%] bg-amber-50 shadow-2xl rounded-2xl p-7 flex flex-col gap-[2.5rem]'>
                 <h1 className='text-4xl font-semibold text-[#85bf78] text-center'>
                     Donate for a good cause
@@ -117,7 +121,11 @@ const DonationComponent = () => {
                     // style={!isSendingFile && { filter : 'blur(3px)'}}
                     >
                         <p>
+<<<<<<< HEAD
                             Donate Now ?
+=======
+                            Visit the page ?
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
                         </p>
                     </motion.button>
                 </div>

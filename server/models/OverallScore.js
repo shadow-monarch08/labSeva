@@ -15,7 +15,10 @@ const scoreSchema = new mongoose.Schema({
     scores: [scoreTypeSchema] // Array of score types, each with multiple instances
 });
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
 const Score = mongoose.model("Score", scoreSchema);
 
 module.exports = Score;

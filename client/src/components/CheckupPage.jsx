@@ -148,7 +148,11 @@ const CheckupPage = () => {
             <div className="checkupGraph__wrapper">
                 <div className="checkup-Line-Pie-Graph__wrapper shadow-xl w-full">
                     {
+<<<<<<< HEAD
                         Object.entries(user).length === 0
+=======
+                        user.username === ''
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
                             ?
                             <div className="coverdiv">
                                 <p>
@@ -166,7 +170,11 @@ const CheckupPage = () => {
                 <div className="wrapper">
                     <div className="checkup-Line-Pie-Graph__wrapper shadow-xl w-[50%]">
                         {
+<<<<<<< HEAD
                             Object.entries(user).length === 0
+=======
+                            user.username === ''
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
                                 ?
                                 <div className="coverdiv" id='pie'>
                                     <p>

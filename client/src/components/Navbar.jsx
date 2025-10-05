@@ -8,8 +8,11 @@ import voting_light from '../images/voting-hand-send-drop-svgrepo-com.svg'
 import voting_dark from '../images/voting-with-a-ballot-hand-send-drop-svgrepo-com.svg'
 import { Link } from 'react-router';
 import { UseGlobalContext } from './Context/Globalcontext';
+<<<<<<< HEAD
 import Icons from '../constants/Icons';
 import GoogleTranslate from './GoogleTranslation';
+=======
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
 
 
 
@@ -17,7 +20,11 @@ import GoogleTranslate from './GoogleTranslation';
 const Navbar = () => {
   const boxRef = useRef(null);
   const dropRef = useRef(null);
+<<<<<<< HEAD
   const { user, setUser, setUserCart } = UseGlobalContext()
+=======
+  const { user, setUser } = UseGlobalContext()
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
   const uncapitalize = (word) => {
     return word[0].toLowerCase() + word.slice(1);
   }
@@ -32,6 +39,7 @@ const Navbar = () => {
               "auth-token": localStorage.getItem('token')
             }
           })
+<<<<<<< HEAD
           let data = await response.json()
           // console.log(data);
           setUser({
@@ -47,6 +55,14 @@ const Navbar = () => {
 
           let cartData = await response2.json();
           setUserCart(cartData.cart.labTests)
+=======
+          let json = await response.json()
+          // console.log(json);
+          setUser({
+            username: json.user.name,
+            useremail: json.user.email
+          })
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
         }
       } catch (error) {
         console.log(error);
@@ -130,7 +146,11 @@ const Navbar = () => {
 
     <nav className='header___navbar' ref={boxRef}>
       <div className="header__navbar-logo-cover">
+<<<<<<< HEAD
         <p><Link to="/">LabSeva</Link></p>
+=======
+        <p><Link to="/">Local Governance</Link></p>
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
       </div>
       <ul className="header__navigation">
         <li className='navigation-lists dropDown-wrapper'>
@@ -152,6 +172,7 @@ const Navbar = () => {
             </div>
           </div>
         </li>
+<<<<<<< HEAD
         <li className='navigation-lists dropDown-wrapper'>
           <div className="vartical-img-wrapper">
             <div className="vertical-img-gallery">
@@ -174,6 +195,12 @@ const Navbar = () => {
       <div className="user-login-logout">
         {
           Object.entries(user).length === 0
+=======
+      </ul>
+      <div className="user-login-logout">
+        {
+          user.username === ''
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
             ?
             <div className="login-out-btns" id='login'>
               <Link to='/login'>Login</Link>
@@ -187,5 +214,8 @@ const Navbar = () => {
   )
 }
 export default Navbar
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751

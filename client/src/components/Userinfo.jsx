@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from 'motion/react';
 import userIcon from '../images/userIcon.png'
 import { UseGlobalContext } from './Context/Globalcontext';
@@ -7,13 +8,29 @@ import { useNavigate } from 'react-router';
 const Userinfo = () => {
     const { showToast, setShowToast, toastBody, setToastBody, user, setUser } = UseGlobalContext()
     let navigate = useNavigate();
+=======
+import userIcon from '../images/userIcon.png'
+import { UseGlobalContext } from './Context/Globalcontext';
+
+const Userinfo = () => {
+    const { showToast, setShowToast, toastBody, setToastBody, user, setUser } = UseGlobalContext()
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
 
     const logout = () => {
         const id = Date.now();
         localStorage.removeItem('token');
+<<<<<<< HEAD
         setUser({})
         setShowToast({ ...showToast, [id]: { toast: 'success' } });
         setToastBody({ ...toastBody, success: { ...toastBody.success, [id]: { title: 'Success!', message: 'loged out successfully' } } })
+=======
+        setUser({
+            username : '',
+            useremail : ''
+        })
+        setShowToast({ ...showToast, [id]: { toast: 'success' } });
+        setToastBody({ ...toastBody, success: { ...toastBody.success, [id]: { title: 'Success!', message: 'loged in successfully' } } })
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
     }
     const toggleDisplay = () => {
         let userInfoTab = document.getElementById('userInfo');
@@ -32,6 +49,7 @@ const Userinfo = () => {
                     </div>
                     <div className="user-name-email">
                         <p>User Name :</p>
+<<<<<<< HEAD
                         <p className='name-email'>{user.name}</p>
                     </div>
                     <div className="user-name-email">
@@ -69,6 +87,16 @@ const Userinfo = () => {
                                 Go Cart
                             </p>
                         </motion.button>
+=======
+                        <p className='name-email'>{user.username}</p>
+                    </div>
+                    <div className="user-name-email">
+                        <p>User Email :</p>
+                        <p className='name-email'>{user.useremail}</p>
+                    </div>
+                    <div className="logout-btn-wrapper">
+                        <button onClick={logout}>Logout</button>
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
                     </div>
                 </div>
             </div>

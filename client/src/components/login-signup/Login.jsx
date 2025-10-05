@@ -69,7 +69,11 @@ const Login = () => {
             </Link>
             <div className="login__form-wrapper">
                 <div className='flex flex-col gap-[3rem] justify-center w-full items-center pl-[3rem]'>
+<<<<<<< HEAD
                     {/* <ToggleWrapper /> */}
+=======
+                    <ToggleWrapper />
+>>>>>>> d793f951326096cdb28314716fb9557a3606c751
                     <div className="form-header">
                         <p className="heading-form">login</p>
                         <p className="info">Login to access all the features</p>
