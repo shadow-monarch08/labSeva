@@ -1,0 +1,28 @@
+@keyframes growHorizontal {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.bottom-bar{
+    position: relative;
+}
+.bottom-bar::after{
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    height: 0.2rem;
+    width: 0%;
+    animation: growHorizontal 7s forwards linear 0.5s;
+}
+
+.success.bottom-bar::after{
+    background-color: #3E7B27;
+}
+.error.bottom-bar::after{
+    background-color: #ff6467;
+}
